@@ -15,6 +15,7 @@ public class AudioRecorder {
 	  private AudioFormat audioFormat;
 	    private TargetDataLine targetDataLine;
 
+	    //demarer l'enregistrement
 	    public void startRecording(String outputFileName) {
 	        try {
 	            audioFormat = new AudioFormat(16000, 16, 2, true, true);
@@ -32,6 +33,7 @@ public class AudioRecorder {
 	        }
 	    }
 
+	    //arreter l'enregistrement
 	    public void stopRecording() {
 	        if (targetDataLine != null) {
 	            targetDataLine.stop();
